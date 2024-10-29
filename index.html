@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반응형 풀페이지</title>
     <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css); 
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');}
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');}
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');}
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');}
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
         * {
             margin: 0;
             padding: 0;
@@ -81,7 +93,14 @@
             color: #007bff;
         }
 
+        .footfix{ display:none; }
+
         /* 반응형 디자인 */
+        @media(max-width:1199px) {
+            .rightfix{display:none;}
+            .footfix{display:block;}
+        }
+
         @media (max-width: 768px) {
             .section h2 {
                 font-size: 2rem;
@@ -107,6 +126,95 @@
                 gap: 0.5rem;
             }
         }
+
+        /*우측 고정*/
+        .rightfix{
+        position: fixed;
+        right:0;
+        top:50%;
+        transform: translateY(-35%);
+        background-color: #003378;
+        height:650px;
+        width:270px;
+        padding:0 25px;
+        border-top-left-radius: 35px;
+        border-bottom-left-radius: 35px;
+        }
+
+        .rightfix .title{text-align: center;margin-top:30px;}
+        .rightfix .title h3{color: #fff;font-weight:300;font-size:18px;line-height: 1;}
+        .rightfix .title h2{color:#0E9FF6;font-weight:500;font-size:20px;}
+        .rightfix .form{
+        border: 1px solid #fff;
+        margin:20px 0;
+        padding:10px;
+        }
+        .rightfix .form input{height:25px;}
+        .rightfix .form-area .form-box{gap:10px;color:#fff;margin-top:10px;text-align: center;}
+        .rightfix .form-box textarea{margin-top:10px;}
+        .rightfix .pri{gap:7px;justify-content: center;align-items: center;}
+        .rightfix .pri p{color:#c0bfbf;font-size:14px;}
+        .rightfix .pri input{width:20px;}
+        .rightfix .buttonset{text-align: center;margin-top:15px;}
+        .rightfix .buttonset button{
+        background-color: #007BED;
+        border:0;
+        color: #fff;
+        font-weight:bold;
+        font-size:20px;
+        margin-bottom:5px;
+        padding:7px 45px;
+        cursor: pointer;
+        }
+        /*mobileinquiry*/
+  footer{margin-bottom:200px;}
+  .footfix{
+    bottom:0;left:0;right:0;
+    position: fixed;
+    width:100%;
+    text-align: center;
+    z-index: 99;
+    background-color: #003378;
+    padding:25px 0;
+    color:#fff;
+  }
+  .footfix .title p{font-size:16px; font-weight:bold;}
+  .footfix .title p span{color:#0E9FF6;}
+  .footfix .footform .footform-box{
+    justify-content: center;
+    align-items: center;
+    margin:10px 0;
+  }
+  .footfix .footform .footform-box input{
+    width:95px;
+    margin:0 5px;
+  }
+  .footfix .footform .footform-box2{
+    justify-content: center;
+    align-items: center;
+    margin:10px 0;
+  }
+  .footfix .footform .footform-box2 input{
+    width:235px;
+    height:35px;
+    margin:0 5px;
+  }
+
+  .footfix .footform .footfoot{justify-content: center;align-items: center;gap:10px;}
+  .footfix .footform .footfoot input{width:15px;height:15px;}
+
+  .footfix .footform .footfoot button{
+    background-color: #007BED;
+    border:0;
+    color: #fff;
+    font-weight:bold;
+    font-size:15px;
+    margin-bottom:5px;
+    padding:7px 20px;
+    cursor: pointer;
+  }
+  .footfix .footform .footfoot p{color:#c0bfbf;font-size:14px;}
+
     </style>
 </head>
 <body>
@@ -138,5 +246,90 @@
         <h2>네 번째 섹션</h2>
         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </section>
+    <div class="rightfix">
+        <div class="title fade-up on">
+          <h3>법정의무교육</h3>
+          <h2>기업상담 문의</h2>
+        </div>
+    
+        <form name="fwrite" id="fwrite" action="https://medicu.net/sub1/bbs/write_update.php" method="post" autocomplete="off">
+                        <input type="hidden" name="uid" value="2024103000152007">
+                        <input type="hidden" name="w" value="">
+                        <input type="hidden" name="bo_table" value="inquiry2">
+                        <input type="hidden" name="wr_id" value="0">
+                        <input type="hidden" name="token" id="token" value="">
+                        <input type="hidden" name="link" id="link" value="/sub1/">
+        <div class="form fade-up delay on">
+          <div class="form-area">
+            <div class="form-box flex">
+              <p>기업명</p>
+              <input type="text" name="wr_subject">
+            </div>
+            <div class="form-box flex">
+              <p>직원수</p>
+              <input type="text" name="wr_3">
+            </div>
+            <div class="form-box flex">
+              <p>담당자</p>
+              <input type="text" name="wr_1">
+            </div>
+            <div class="form-box flex">
+              <p>이메일</p>
+              <input type="text" name="wr_2">
+            </div>
+            <div class="form-box flex">
+              <p>연락처</p>
+              <input type="text" name="wr_name">
+            </div>
+            <div class="form-box">
+              <p>문의내용</p>
+              <textarea name="wr_content" id="" cols="33" rows="5"></textarea>
+            </div>
+            <div class="pri flex">
+              <input type="checkbox" checked="">
+              <p>개인정보취급방침</p>
+            </div>
+            <div class="buttonset">
+                <button type="submit">무료상담신청</button>
+                <img src="https://medicu.net/img/rfix2.png" alt="">
+                <img src="https://medicu.net/img/rfix3.png" alt="">
+            </div>
+          </div>
+        </div>
+    </form>
+      </div>
+
+      <div class="footfix">
+        <div class="title fade-up on">
+          <p>법정의무교육 <span>기업상담 문의</span></p>
+        </div>
+        <div class="footform fade-up delay on">
+        <form name="fwrite" id="fwrite" action="https://medicu.net/sub1/bbs/write_update.php" method="post" autocomplete="off">
+                      <input type="hidden" name="uid" value="2024103000224501">
+                      <input type="hidden" name="w" value="">
+                      <input type="hidden" name="bo_table" value="inquiry2">
+                      <input type="hidden" name="wr_id" value="0">
+                      <input type="hidden" name="token" id="token" value="">
+                      <input type="hidden" name="link" id="link" value="/sub1/">
+            <div class="footform-area">
+              <div class="footform-box flex">
+                <p>기업명</p>
+                <input type="text" name="wr_subject">
+                <p>연락처</p>
+                <input type="text" name="wr_name">
+              </div>
+              <div class="footform-box2 flex">
+                <p>문의내용</p>
+                <input type="text" name="wr_content">
+              </div>
+            </div>
+            <div class="footfoot flex">
+              <input type="checkbox" checked=""><p>개인정보취급방침</p>
+              <button type="submit">무료상담신청</button>
+            </div>
+          </form>
+        </div>
+    </div>
 </body>
+
 </html>
