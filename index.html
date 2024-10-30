@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>반응형 풀페이지</title>
+    <title>메디큐교육개발원</title>
     <style>
         @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
@@ -422,7 +422,7 @@
             <h2>기업상담 문의</h2>
         </div>
 
-        <form name="fwrite" id="fwrite" method="post" autocomplete="off" target="ifrm" onsubmit="alert('문의 내용이 등록되었습니다.'); return false;">
+        <form name="fwrite" id="fwrite" method="post" autocomplete="off" target="ifrm">
             <div class="form fade-up delay on">
                 <div class="form-area">
                     <div class="form-box flex">
@@ -468,7 +468,7 @@
             <p>법정의무교육 <span>기업상담 문의</span></p>
         </div>
         <div class="footform fade-up delay on">
-            <form name="fwrite" id="fwrite" method="post" autocomplete="off" target="ifrm" onsubmit="alert('문의 내용이 등록되었습니다.'); return false;">
+            <form name="fwrite" id="fwrite" method="post" autocomplete="off" target="ifrm">
                 <div class="footform-area">
                     <div class="footform-box flex">
                         <p>기업명</p>
@@ -499,21 +499,23 @@
         if (frm.company.value == '') {
             alert('기업명을 입력해주세요');
             frm.company.focus();
-            return fasle;
+            return false;
         }
         if (frm.contact.value == '') {
             alert('연락처를 입력해주세요');
             frm.contact.focus();
-            return fasle;
+            return false;
         }
         if (frm.contents.value == '') {
             alert('문의내용을 입력해주세요');
             frm.contents.focus();
-            return fasle;
-        }
-        
-        frm.action = "https://script.google.com/macros/s/AKfycbxeiCShmiBnyF60ZigYtn7Bu2VAxE7mPUzdmGCqSK7ON2Hs_y14VRIoEtiOgHt2HAj_/exec";
-        frm.submit();        
+            return false;
+        }        
+
+        frm.action = "https://script.google.com/macros/s/AKfycbxQUHmW2zksrnNLic2zLJUZNTzUuzhw9FlgwffDpJ9TrnuTbUqXuu8jlZTHi-hCZQxW/exec";
+        frm.submit();
+
+        alert('문의 내용이 등록되었습니다.'); return false;
     }
   </script>
 </html>
