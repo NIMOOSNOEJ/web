@@ -3,367 +3,444 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" id="meta_viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
     <title>메디큐교육개발원</title>
     <style>
-        @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
 
-        @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-weight: 100;
-            src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
-        }
+        @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');}
 
-        @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-weight: 300;
-            src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
-        }
+        @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');}
 
-        @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-weight: 400;
-            src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
-        }
+        @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');}
 
-        @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-weight: 500;
-            src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
-        }
+        @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');}
 
-        @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-weight: 700;
-            src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
-        }
+        @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
 
-        @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-weight: 900;
-            src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            height: 100%;
-            scroll-behavior: smooth;
-        }
-
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        input,
-        textarea,
-        select {
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        ul li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .flex {
-            display: flex;
-        }
-
-        .inner {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            line-height: 1.6;
-        }
-
-        /* 각 섹션별 배경색 */
-        #section1 {
-            background-color: #f8f9fa;
-        }
-
-        #section2 {
-            background-color: #e9ecef;
-        }
-
-        #section3 {
-            background-color: #dee2e6;
-        }
-
-        #section4 {
-            background-color: #ced4da;
-        }
-
-        /* 네비게이션 */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 1rem;
-            z-index: 1000;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #007bff;
-        }
-
-        .footfix {
-            display: none;
-        }
-
-        /* 반응형 디자인 */
-        @media(max-width:1199px) {
-            .rightfix {
-                display: none;
-            }
-
-            .footfix {
-                display: block;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .section h2 {
-                font-size: 2rem;
-            }
-
-            .section p {
-                font-size: 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section h2 {
-                font-size: 1.5rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5rem;
-            }
-        }
-
+        body, h1, h2, h3, h4, h5, h6, input, textarea, select {font-family: 'Noto Sans KR', sans-serif;}
+        *{padding:0;margin:0;}
+        ul li{list-style: none;}
+        a{text-decoration: none;color: inherit;}
+        .flex{display: flex;}
+        .inner{max-width:1200px;margin:0 auto;}
         /*우측 고정*/
-        .rightfix {
+        .rightfix{
             position: fixed;
-            right: 0;
-            top: 50%;
+            right:0;
+            top:50%;
             transform: translateY(-35%);
             background-color: #003378;
-            height: 650px;
-            width: 320px;
-            padding: 0 25px;
+            height:650px;
+            width:270px;
+            padding:0 25px;
             border-top-left-radius: 35px;
             border-bottom-left-radius: 35px;
         }
 
-        .rightfix .title {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .rightfix .title h3 {
-            color: #fff;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 1;
-        }
-
-        .rightfix .title h2 {
-            color: #0E9FF6;
-            font-weight: 500;
-            font-size: 20px;
-        }
-
-        .rightfix .form {
+        .rightfix .title{text-align: center;margin-top:30px;}
+        .rightfix .title h3{color: #fff;font-weight:300;font-size:18px;line-height: 1;}
+        .rightfix .title h2{color:#0E9FF6;font-weight:500;font-size:20px;}
+        .rightfix .form{
             border: 1px solid #fff;
-            margin: 20px 0;
-            padding: 10px;
+            margin:20px 0;
+            padding:10px;
         }
-
-        .rightfix .form input {
-            height: 25px;
-        }
-
-        .rightfix .form-area .form-box {
-            gap: 10px;
-            color: #fff;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        .rightfix .form-box textarea {
-            margin-top: 10px;
-        }
-
-        .rightfix .pri {
-            gap: 7px;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .rightfix .pri p {
-            color: #c0bfbf;
-            font-size: 14px;
-        }
-
-        .rightfix .pri input {
-            width: 20px;
-        }
-
-        .rightfix .buttonset {
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .rightfix .buttonset button {
+        .rightfix .form input{height:25px;}
+        .rightfix .form-area .form-box{gap:10px;color:#fff;margin-top:10px;text-align: center;}
+        .rightfix .form-box textarea{margin-top:10px;}
+        .rightfix .pri{gap:7px;justify-content: center;align-items: center;}
+        .rightfix .pri p{color:#c0bfbf;font-size:14px;}
+        .rightfix .pri input{width:20px;}
+        .rightfix .buttonset{text-align: center;margin-top:15px;}
+        .rightfix .buttonset button{
             background-color: #007BED;
-            border: 0;
+            border:0;
             color: #fff;
-            font-weight: bold;
-            font-size: 20px;
-            margin-bottom: 5px;
-            padding: 7px 45px;
+            font-weight:bold;
+            font-size:20px;
+            margin-bottom:5px;
+            padding:7px 45px;
             cursor: pointer;
         }
 
-        /*mobileinquiry*/
-        footer {
-            margin-bottom: 200px;
-        }
+        #section1{background: url('img/sec01bg.jpg') no-repeat;
+            background-size: cover;
+            height: 100vh;}
+        .head{padding:25px 0;}
+        .head .logo{text-align: center;}
+        #section1 .main .contents{justify-content: center; align-items: center;gap:30px;background-color: #fff;padding:15px 0;}
+        .sub{text-align: center;padding:35px 0;}
+        .sub article{justify-content: center; align-items: center;
+            gap:30px;margin-top:35px;}
 
-        .footfix {
-            bottom: 0;
-            left: 0;
-            right: 0;
-            position: fixed;
-            width: 100%;
+
+        #section2{
+            background: url('img/sec02bg.jpg') no-repeat;
+            background-size: cover;
+            padding:80px 0;
+            height:100vh;
             text-align: center;
-            z-index: 99;
-            background-color: #003378;
-            padding: 25px 0;
-            color: #fff;
         }
-
-        .footfix .title p {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .footfix .title p span {
-            color: #0E9FF6;
-        }
-
-        .footfix .footform .footform-box {
+        #section2 .contents{
             justify-content: center;
             align-items: center;
-            margin: 10px 0;
+            gap:30px;
+            border-bottom: 1px solid #fff;
+            border-top: 1px solid #fff;
+            padding:5px 0;
         }
 
-        .footfix .footform .footform-box input {
-            width: 95px;
-            margin: 0 5px;
+        #section2 .con{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            flex-wrap: wrap;
+            gap:100px;
+            padding:200px 0 150px 0;
         }
 
-        .footfix .footform .footform-box2 {
+
+        #section2 .toptoptop {
             justify-content: center;
             align-items: center;
-            margin: 10px 0;
+            gap:10px;
+        }
+        #section2 .toptoptop .top1l{margin-top:35px;}
+
+
+        #section2 .con p{
+            color:#CFCFCF;
+            font-size:20px;
         }
 
-        .footfix .footform .footform-box2 input {
-            width: 235px;
-            height: 35px;
-            margin: 0 5px;
+        #section2 .con h1{
+            color:#fff;
+            font-size:80px;
         }
 
-        .footfix .footform .footfoot {
+        #section2 .con h1 span{
+            font-size:32px;
+        }
+
+        #section2 .con .top1l span{
+            font-size:32px;
+            color:#fff;
+            font-weight:bold;
+        }
+
+        #section2 .subtitle p{
+            color:#fff;
+            font-size:24px;
+        }
+
+        #section3{
+            background: url('img/sec03bg.jpg') no-repeat;
+            background-size: cover;
+            padding:80px 0 0;
+            text-align: center;
+        }
+
+        #section3 .contents{
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap:30px;
+            background-color: #fff;
+            border-bottom: 1px solid #fff;
+            border-top: 1px solid #fff;
+            padding:5px 0;
+        }
+        #section3 .title{margin:80px 0;}
+        #section3 .submain img{width:70%;}
+        #section3 .bottom{margin-top:80px;}
+
+        #section4{
+            background: url('img/sec04bg.png') no-repeat;
+            background-size: cover;
+            padding:80px 0 0;
+            text-align: center;
         }
 
-        .footfix .footform .footfoot input {
-            width: 15px;
-            height: 15px;
+        #section4 .contents{
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+            background-color: #fff;
+            border-bottom: 1px solid #fff;
+            border-top: 1px solid #fff;
+            padding:5px 0;
+        }
+        #section4 .title{margin:80px 0;}
+        #section4 .middle{
+            display:flex;
+            justify-content: center;
+        }
+        #section4 .bottom{margin-top:70px;margin-bottom:20px;}
+
+        #section5{
+            background: url('img/sec04g.png') no-repeat;
+            background-size: cover;
+            padding:80px 0;
+            text-align: center;
         }
 
-        .footfix .footform .footfoot button {
-            background-color: #007BED;
-            border: 0;
-            color: #fff;
-            font-weight: bold;
-            font-size: 15px;
-            margin-bottom: 5px;
-            padding: 7px 20px;
-            cursor: pointer;
+        #section5 .main .contents{
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+            border-bottom: 1px solid #B3B7BF;
+            border-top: 1px solid #B3B7BF;
+            padding:5px 0;
         }
 
-        .footfix .footform .footfoot p {
-            color: #c0bfbf;
-            font-size: 14px;
+        #section5 .title{margin:80px 0;}
+        #section5 .content{
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        #section1{background: url('img/sec01bg.jpg') no-repeat; background-size: cover; height: 100vh;}
-        #section2{background: url('img/sec02bg.jpg') no-repeat; background-size: cover; padding:80px 0; height:100vh; text-align: center;}
-        #section3{background: url('img/sec03bg.jpg') no-repeat; background-size: cover; padding:80px 0 0; text-align: center; }
-        #section4{background: url('img/sec04bg.png') no-repeat; background-size: cover; padding:80px 0 0; text-align: center;} 
-        #section6{background: url('img/sec06bg.jpg') no-repeat; background-size: cover; padding:80px 0 0; text-align: center; }
+        #section5 .content img{
+            width:33%;
+        }
+
+        #section6{
+            background: url('img/sec06bg.jpg') no-repeat;
+            background-size: cover;
+            padding:80px 0 0;
+            text-align: center;
+        }
+
+        #section6 .main .contents{
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+            border-bottom: 1px solid #B3B7BF;
+            border-top: 1px solid #B3B7BF;
+            padding:5px 0;
+            background-color: #fff;
+        }
+
+        #section6 .title{margin:80px 0;}
+
+        #section6 .bottom{margin-top:20px;}
+
+        #section7{
+            padding:80px 0;
+            text-align: center;
+        }
+
+        #section7 .main .contents{
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+            border-bottom: 1px solid #B3B7BF;
+            border-top: 1px solid #B3B7BF;
+            padding:5px 0;
+        }
+        #section7 article{max-width:850px;margin:0 auto;}
+        #section7 .title{margin:80px 0;}
+        #section7 ul { text-align: left; border-top: 2px solid #000; }
+        #section7 li { border-bottom: 1px solid #ddd; }
+        #section7 li > div { padding: 1em; }
+        #section7 li .icon { font-size: 1.5em; text-align: center; width: 1.5em; line-height: 1.5em; display: inline-block; color: #003763;border-radius: 5em; }
+        #section7 li p { font-size: 1.375em; padding: 0 1em; width: calc(100% - 3em); }
+        #section7 li .q-box { display: flex; align-items: center; cursor: pointer; }
+        #section7 li .q-box .arrow { margin-left: auto; font-size: 2em; }
+        #section7 li .q-box .arrow i {transition: 0.4s; }
+        #section7 li .q-box.on .arrow i { transform: rotate(180deg); }
+        #section7 li .a-box { background-color: #f9f9f9; display: none; }
+        #section7 li .a-box p { color: #666; line-height:1.5;}
+        #section7 li .a-box * { display: inline-block; vertical-align: top;  }
+        #section7 li:nth-child(odd){
+            background-color: #E2ECFE;
+        }
+
+        footer{background-color: #333333;
+            width:100%;
+            color:#D9D9D9;}
+        footer .foot{
+            padding:25px 0 40px;
+            text-align: left;
+            justify-content: center;
+            align-items: center;
+            height:100%;
+            gap:50px;
+        }
+        footer .foot .foottem img{
+            margin:0 10px;
+        }
+        footer p{
+            margin-top:25px;
+        }
+
+        .footfix{display:none;}
+
+        .fade-up { transform: translateY(3rem); opacity: 0; -webkit-animation: 0.6s ease-out 0s 1 normal forwards; animation: 0.6s ease-out 0s 1 normal forwards; }
+        .delay { -webkit-animation-delay: 0.2s; animation-delay: 0.2s }
+        .fade-up.on { -webkit-animation-name: fade-up; animation-name: fade-up; }
+        @-webkit-keyframes fade-up {
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fade-up {
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @media(max-width:1199px){
+            .head{padding:15px 0;}
+            .head .logo img{width:50%;}
+            .inner{max-width:90%;}
+            .rightfix{display:none;}
+            .footfix{display:block;}
+            #section7 { padding:50px 0;}
+            #section7 li .icon { font-size: 2em;}
+            #section7 li p { font-size: 1.15em;}
+            #section7 li .q-box .arrow {font-size: 2em; }
+
+            /*sec01*/
+            #section1{height: 100%;}
+            #section1 .main .contents{gap:15px;padding:10px 0;}
+            #section1 .main .contents img{width:25%;}
+            #section1 .main .contents img:last-child{width:50%;}
+            #section1 .sub .subimg img{width:90%;}
+            #section1 .sub .subimg2 img{width:90%;}
+            #section1 .sub article img{width:90%;}
+            #section1 .sub article{flex-direction: column;}
+
+            /*sec02*/
+            #section2 .contents{gap:15px;padding:10px 0;}
+            #section2 .contents img{width:25%;}
+            #section2 .contents img:last-child{width:50%;}
+            #section2{padding:50px 0;height:100%;}
+            #section2 .con{display: flex;
+                justify-content: center;
+                align-items: center;
+                gap:50px;
+                padding:80px 0;
+            }
+            #section2 .con p{font-size:14px;}
+            #section2 .con h1{font-size:36px;}
+            #section2 .con h3{font-size:204px;}
+            #section2 .subtitle p{font-size:16px;}
+
+            #section2 .toptoptop .top1l{margin-top:15px;}
+
+            #section2 .con .top1l span{
+                font-size:18px;
+
+            }
+
+            /*sec03*/
+            #section3 .main .contents{gap:15px;padding:10px 0;}
+            #section3 .main .contents img{width:25%;}
+            #section3 .main .contents img:last-child{width:50%;}
+            #section3 .title img{width:90%;}
+            #section3 .submain img{width:90%;}
+            #section3 .bottom img{width:90%;}
+            #section3{padding:50px 0 0;}
+            #section3 .title{margin:30px 0;}
+            #section3 .bottom{margin-top:50px;}
+
+            /*sec04*/
+            #section4 .main .contents{gap:15px;padding:10px 0;}
+            #section4 .main .contents img{width:25%;}
+            #section4 .main .contents img:last-child{width:50%;}
+            #section4 .title img{width:90%;}
+            #section4 .middle img{width:45%;}
+            #section4 .bottom img{width:90%;}
+            #section4 .bot img{width:90%;}
+            #section4 .title{margin:30px 0;}
+            #section4{padding:50px 0 0;}
+            #section4 .bottom{margin-top:35px;margin-bottom:20px;}
+
+            /*sec05*/
+            #section5{padding:50px 0;}
+            #section5 .main .contents{gap:15px;padding:10px 0;}
+            #section5 .main .contents img{width:25%;}
+            #section5 .main .contents img:last-child{width:50%;}
+            #section5 .title img{width:90%;}
+            #section5 .title{margin:30px 0;}
+            #section5 .content img{width:49%;}
+
+            /*sec06*/
+            #section6{padding:50px 0 0;}
+            #section6 .main .contents{gap:15px;padding:10px 0;}
+            #section6 .main .contents img{width:25%;}
+            #section6 .main .contents img:last-child{width:50%;}
+            #section6 .title img{width:90%;}
+            #section6 .title{margin:30px 0;}
+            #section6 .submain img{width:90%;}
+            #section6 .bottom img{width:90%;}
+
+            /*sec07*/
+            #section7{padding:50px 0;}
+            #section7 .main .contents{gap:15px;padding:10px 0;}
+            #section7 .main .contents img{width:25%;}
+            #section7 .main .contents img:last-child{width:50%;}
+            #section7 .title img{width:90%;}
+            #section7 .title{margin:30px 0;}
+            #section7 article{max-width:85%;}
+            #section7 li p {font-size: 0.8em;}
+
+            /*foot*/
+            footer{background-color: #333333;
+                width:100%;
+                color:#D9D9D9;}
+            footer .foot{padding:50px 0;text-align: center;gap:0;
+                flex-direction: column-reverse;
+            }
+            footer .foot .footcon p{font-size:13px;}
+
+            /*mobileinquiry*/
+            footer{margin-bottom:200px;}
+            .footfix{
+                bottom:0;left:0;right:0;
+                position: fixed;
+                width:100%;
+                text-align: center;
+                z-index: 99;
+                background-color: #003378;
+                padding:25px 0;
+                color:#fff;
+            }
+            .footfix .title p{font-size:16px; font-weight:bold;}
+            .footfix .title p span{color:#0E9FF6;}
+            .footfix .footform .footform-box{
+                justify-content: center;
+                align-items: center;
+                margin:10px 0;
+            }
+            .footfix .footform .footform-box input{
+                width:95px;
+                margin:0 5px;
+            }
+            .footfix .footform .footform-box2{
+                justify-content: center;
+                align-items: center;
+                margin:10px 0;
+            }
+            .footfix .footform .footform-box2 input{
+                width:235px;
+                height:35px;
+                margin:0 5px;
+            }
+
+            .footfix .footform .footfoot{justify-content: center;align-items: center;gap:10px;}
+            .footfix .footform .footfoot input{width:15px;height:15px;}
+
+            .footfix .footform .footfoot button{
+                background-color: #007BED;
+                border:0;
+                color: #fff;
+                font-weight:bold;
+                font-size:15px;
+                margin-bottom:5px;
+                padding:7px 20px;
+                cursor: pointer;
+            }
+            .footfix .footform .footfoot p{color:#c0bfbf;font-size:14px;}
+
+        }
+
     </style>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -371,7 +448,7 @@
 </head>
 
 <body>
-    <nav>
+    <!--nav>
         <ul>
             <li><a href="#section1">섹션 1</a></li>
             <li><a href="#section2">섹션 2</a></li>
@@ -380,42 +457,314 @@
             <li><a href="#section5">섹션 5</a></li>
             <li><a href="#section6">섹션 6</a></li>
         </ul>
-    </nav>
+    </nav-->
+    <section id="section1" class="section">
 
-    <section id="section1" class="section" data-aos="fade-up">
-        <h2>첫 번째 섹션</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.</p>
+        <header class="inner" data-aos="fade-up">
+            <div class="head">
+                <div class="logo">
+                    <img src="img/toplogo.png" alt="">
+                </div>
+            </div>
+        </header>
+        <main data-aos="fade-up">
+            <div class="main fade-up on">
+                <div class="contents flex">
+                    <img src="img/rhdyd.png" alt="">
+                    <img src="img/wlwjd.png" alt="">
+                </div>
+            </div>
+        </main>
+        <sub data-aos="fade-up">
+            <div class="sub">
+                <div class="inner">
+                    <div class="subimg fade-up on">
+                        <img src="img/maintxt.png" alt="">
+                    </div>
+                    <div class="subimg2 fade-up delay on">
+                        <img src="img/subtxt.png" alt="">
+                    </div>
+                    <article class="flex fade-up delay on">
+                        <img src="img/main1.png" alt="">
+                        <img src="img/main2.png" alt="">
+                        <img src="img/main3.png" alt="">
+                    </article>
+                </div>
+            </div>
+        </sub>
     </section>
 
     <section id="section2" class="section" data-aos="fade-up">
-        <h2>두 번째 섹션</h2>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <div class="contents flex fade-up on">
+            <img src="img/sec02rhdyd.png" alt="">
+            <img src="img/sec02wlwjd.png" alt="">
+        </div>
+        <div class="con inner">
+            <div class="ltop1 fade-up on" data-aos="fade-up">
+                <p>메디큐교육개발원 누적 훈련생 수</p>
+                <div class="toptoptop flex">
+                    <h1 class="counter" data-start="0" data-end="61896">61,896</h1>
+                    <div class="top1l">
+                        <span> 명</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ltop1 fade-up delay on" data-aos="fade-up">
+                <p>메디큐교육개발원 누적 비환급과정 수강 진행 수</p>
+                <div class="toptoptop flex">
+                    <h1 class="counter" data-start="0" data-end="204178">204,178</h1>
+                    <div class="top1l">
+                        <span> 과정</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ltop1 fade-up delay on" data-aos="fade-up">
+                <p>메디큐교육개발원 누적 환급과정 수강 진행 수</p>
+                <div class="toptoptop flex">
+                    <h1 class="counter" data-start="0" data-end="40659">40,659</h1>
+                    <div class="top1l">
+                        <span> 과정</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ltop1 fade-up on" data-aos="fade-up">
+                <p>메디큐교육개발원 보건업 및 일반기업 사업체 수</p>
+                <div class="toptoptop flex">
+                    <h1 class="counter" data-start="0" data-end="2395">2,395</h1>
+                    <div class="top1l">
+                        <span> 사업체</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle fade-up delay on" data-aos="fade-up">
+            <p>2024년 메디큐교육개발원 LMS DATA 기준</p>
+        </div>
     </section>
 
     <section id="section3" class="section" data-aos="fade-up">
-        <h2>세 번째 섹션</h2>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <main>
+            <div class="main fade-up on">
+                <div class="contents flex">
+                    <img src="img/rhdyd.png" alt="">
+                    <img src="img/wlwjd.png" alt="">
+                </div>
+            </div>
+        </main>
+        <div class="con">
+            <div class="title fade-up delay on">
+                <img src="img/sec03title.png" alt="">
+            </div>
+            <div class="submain fade-up delay on">
+                <img src="img/sec03con.png" alt="">
+            </div>
+            <div class="bottom fade-up delay">
+                <img src="img/sec03bot.png" alt="">
+            </div>
+        </div>
     </section>
 
     <section id="section4" class="section" data-aos="fade-up">
-        <h2>네 번째 섹션</h2>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.</p>
+        <main>
+            <div class="main fade-up on">
+                <div class="contents flex">
+                    <img src="img/rhdyd.png" alt="">
+                    <img src="img/wlwjd.png" alt="">
+                </div>
+            </div>
+        </main>
+        <div class="title fade-up delay on">
+            <img src="img/sec04top.png" alt="">
+        </div>
+        <div class="middle fade-up delay on">
+            <img src="img/sec04l1.png" alt="">
+            <img src="img/sec04r1.png" alt="">
+        </div>
+        <div class="bottom fade-up delay">
+            <img src="img/sec04bot.png" alt="">
+        </div>
+        <div class="bot fade-up delay">
+            <img src="img/sec04bottom.png" alt="">
+        </div>
     </section>
-
     <section id="section5" class="section" data-aos="fade-up">
-        <h2>다섯 번째 섹션</h2>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.</p>
+        <main>
+            <div class="main fade-up on">
+                <div class="contents flex">
+                    <img src="img/rhdyd.png" alt="">
+                    <img src="img/wlwjd.png" alt="">
+                </div>
+            </div>
+        </main>
+        <div class="title fade-up delay on">
+            <img src="img/sec05title.png" alt="">
+        </div>
+        <div class="content flex inner fade-up delay on">
+            <article>
+                <img src="img/sec051.jpg" alt="">
+                <img src="img/sec052.jpg" alt="">
+                <img src="img/sec053.jpg" alt="">
+                <img src="img/sec054.jpg" alt="">
+                <img src="img/sec055.jpg" alt="">
+                <img src="img/sec056.jpg" alt="">
+            </article>
+        </div>
     </section>
 
     <section id="section6" class="section" data-aos="fade-up">
-        <h2>여섯 번째 섹션</h2>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.</p>
+        <main>
+            <div class="main fade-up on">
+                <div class="contents flex">
+                    <img src="img/rhdyd.png" alt="">
+                    <img src="img/wlwjd.png" alt="">
+                </div>
+            </div>
+        </main>
+        <div class="title fade-up delay on">
+            <img src="img/sec06title.png" alt="">
+        </div>
+        <div class="submain fade-up delay on">
+            <img src="img/sec06main.png" alt="">
+        </div>
+        <div class="bottom fade-up delay on">
+            <img src="img/sec06bottom.png" alt="">
+        </div>
     </section>
+
+    <section id="section7" class="section" data-aos="fade-up">
+        <main>
+            <div class="main fade-up on">
+                <div class="contents flex">
+                    <img src="img/rhdyd.png" alt="">
+                    <img src="img/wlwjd.png" alt="">
+                </div>
+            </div>
+        </main>
+        <div class="title fade-up delay on">
+            <img src="img/sec07title.png" alt="">
+        </div>
+        <article>
+
+            <div class="con fade-up delay on">
+                <ul>
+                    <li>
+                        <div class="q-box">
+                            <b class="icon">Q.</b>
+                            <p>법정의무교육은 어디서 받아야 하나요?</p>
+                            <div class="arrow">
+                                <i class="xi-angle-down-thin"></i>
+                            </div>
+                        </div>
+                        <div class="a-box" style="display: none;">
+
+                            <p>
+                                고용노동부에 등록된 교육기관에 위탁하여 실시해야 합니다.
+                                최근 고용노동부 직원(또는 산하기관)임을 사칭하여 교육을 강요하거나 교육을 빌미로 각종 보험상품 판매 등 교육과
+                                관계 없는 행위를 하는 경우가 많습니다.
+
+                                등록된 교육기관이 아닌 곳에서 교육을 실시하거나 법에서 정한 기준에 맞지 않는 교육을 받는경우에는 교육실적으로
+                                인정받지 못해 사업장에 큰 피해가 발생할 수 있습니다.
+
+                                저희 메디큐교육개발원은 고용 노동부 지정 위탁기관으로 사업장별 맞춤교육을 통해 안전하게 법정 의무교육을 이수 할 수 있습니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="q-box">
+                            <b class="icon">Q.</b>
+                            <p>법정의무교육의 종류는 무엇이 있나요?</p>
+                            <div class="arrow">
+                                <i class="xi-angle-down-thin"></i>
+                            </div>
+                        </div>
+                        <div class="a-box" style="">
+
+                            <p>
+                                각 기업 및 단체에서 받아야 하는 의무교육은 업종 및 업무에 따라 상이합니다. 크게 분류하면
+                                5대법정의무교육과 산업안전보건교육으로 분류됩니다.
+
+                                법정의무교육은 직장 내 성희롱예방교육, 개인정보보호교육, 직장 내 장애인인식개선교육, 직장 내 괴롭힘 방지교육,
+                                퇴직연금교육 등이 대표적인 의무교육입니다. 법정의무교육은 매년 1회 이상, 1시간 이상 이수를 하셔야 합니다
+                                산업안전보건교육 대상 사업장의 경우 신규채용자, 관리감독자, 근로자 매 반기별(상ㆍ하반기) 업종 및 업무에 따라 6~12시간 이수하셔야합니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="q-box">
+                            <b class="icon">Q.</b>
+                            <p>법정의무교육을 이수하지 않으면어떻게 되나요?</p>
+                            <div class="arrow">
+                                <i class="xi-angle-down-thin"></i>
+                            </div>
+                        </div>
+                        <div class="a-box" style="">
+
+                            <p>
+                                법정의무교육은 모든 근로자는 법적으로 이수해야하는 의무교육입니다. 미실시 시 사업자는 최소 300만원에서
+                                최대 5억까지 과태료가 부과될 수 있습니다.
+                            </p>
+                            <img src="img/qtable.png" alt="" style="width:100%;margin-top:15px;">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="q-box">
+                            <b class="icon">Q.</b>
+                            <p>법정의무교육은 정해진 시간에만 받을 수 있나요?</p>
+                            <div class="arrow">
+                                <i class="xi-angle-down-thin"></i>
+                            </div>
+                        </div>
+                        <div class="a-box" style="">
+
+                            <p>
+                                학습관리 시스템 체계를 구축하고 있으므로, 언제 어디서나 상시 학습이 가능합니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="q-box">
+                            <b class="icon">Q.</b>
+                            <p>교육 진행 절차가 궁금해요</p>
+                            <div class="arrow">
+                                <i class="xi-angle-down-thin"></i>
+                            </div>
+                        </div>
+                        <div class="a-box" style="">
+
+                            <p>
+                                01.교육문의 &gt; 02.교육상담 및 견적 진행 &gt; 03.계약 및 서류접수 &gt; 04.훈련생입과 및 교육과정 셋팅 &gt;
+                                05.교육담당자 계정생성 및 문자 등 발송 &gt; 06.개강 및 학습진행 &gt; 07.교육완료 및 수료증 발급
+
+                                메디큐교육개발원은 훈련생(교육생) 명단을 발송해주시면 2~3일 뒤 개강을 진행 하고 있습니다.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <div class="inner">
+            <div class="foot flex">
+                <div class="footcon">
+                    <p>
+                        대표자 : 김경민, 김정우 | Tel : 070-4866-2757 | E-mail : medicu-edu@naver.com<br>
+                        개인정보책임자 : 마재락 | 사업자등록번호 : 732-81-01503 | 통신판매신고 : 제2023-대전유성-0155호
+                    </p>
+                    <p>
+                        COPYRIGHT (주)medicu-edu Inc. ALL RIGHT RESERVED.  본 사이트 내의 컨텐츠는 저작권법 상의 보호를 받고 있습니다.
+                    </p>
+                </div>
+                <div class="foottem">
+                    <a href="https://blog.naver.com/medicu-edu" target="_blank"><img src="img/blog.png" alt="" title=""></a>
+                    <a href="https://www.instagram.com/medicu_01" target="_blank"><img src="img/insta.png" alt="" title=""></a>
+                    <a href="https://cafe.naver.com/medicu01" target="_blank"><img src="img/cafe.png" alt="" title=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <div class="rightfix">
         <div class="title fade-up on">
             <h3>법정의무교육</h3>
@@ -494,6 +843,35 @@
 <script>
     AOS.init();
 
+    jQuery(function() {
+        jQuery('.counter').each(function () {
+
+            var num = jQuery(this).text().replace(",", "");
+
+            jQuery(this).prop('Counter', 0)
+                .animate({Counter: num}, {
+                        duration: 1000,
+                        easing: 'swing',
+                        step: function (now) {
+                            var num = numberWithCommas(Math.floor(now));
+                            jQuery(this).text(num);
+                        }
+                    }
+                )
+        });
+
+        jQuery('#section7 li .q-box').click(function(){
+            jQuery(this).toggleClass('on')
+            jQuery(this).siblings().removeClass('on')
+            jQuery(this).siblings('.a-box').slideToggle();
+            jQuery(this).parent('li').siblings().children('.a-box').slideUp();
+        })
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    });
+
     function toSubmit() {
         var frm = jQuery(this).closest('form')[0];
         if (frm.company.value == '') {
@@ -510,12 +888,13 @@
             alert('문의내용을 입력해주세요');
             frm.contents.focus();
             return false;
-        }        
+        }
 
         frm.action = "https://script.google.com/macros/s/AKfycbyNIcqkYQ5PC-ybN3RGqpU4V8mcrYogsRf3dZCen7-PKILjK9PThez0FbLBU7sHpSwx/exec";
         frm.submit();
 
         alert('문의 내용이 등록되었습니다.'); return false;
     }
-  </script>
+</script>
+
 </html>
